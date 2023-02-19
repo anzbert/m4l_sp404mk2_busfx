@@ -1129,7 +1129,7 @@ var data = {
   },
 };
 
-outlets = 6;
+outlets = 12;
 var labels = ["C1", "C2", "C3", "C4", "C5", "C6"];
 var fxTypes = ["", "", "", "", "", ""];
 var directFxTypes = [
@@ -1143,8 +1143,16 @@ var directFxTypes = [
 var module = 0; // 0 is off
 
 function bang() {
-  for (var i = 0; i < labels.length; i++) {
+  for (var i = 0; i <= 5; i++) {
     outlet(i, ["set", labels[i]]);
+  }
+  for (var j = 6; j <= 12; j++) {
+    if (!startsWith(fxTypes[j - 6], "Direct")) {
+      outlet(j, ["set", fxTypes[j - 6]]);
+    } else {
+      var directFxNumber = parseInt(fxTypes[j - 6].slice(-1)) - 1; // get last character (Direct FX number)
+      outlet(j, ["set", directFxTypes[directFxNumber]]);
+    }
   }
 }
 
