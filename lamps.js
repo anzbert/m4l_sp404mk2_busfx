@@ -9,9 +9,14 @@ function bang() {
 }
 
 function light(pressed) {
+  // post("pressed", pressed);
   for (var i = 0; i < out.length; i++) {
     if (pressed == i) {
-      out[i] = 1;
+      if (pressed == 6) {
+        out[i] = 0;
+      } else {
+        out[i] = 1;
+      }
     } else {
       out[i] = 0;
     }

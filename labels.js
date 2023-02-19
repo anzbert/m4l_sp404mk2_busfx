@@ -1129,9 +1129,9 @@ var data = {
   },
 };
 
-outlets = 12;
+outlets = 12; // 0-5 is for Ctrl labels, 6-11 is for labels in ext. window
 var labels = ["C1", "C2", "C3", "C4", "C5", "C6"];
-var fxTypes = ["", "", "", "", "", ""];
+var fxTypes = ["", "", "", "", "", "", ""];
 var directFxTypes = [
   "Filter+Drive",
   "Resonator",
@@ -1140,13 +1140,13 @@ var directFxTypes = [
   "DJFX Looper",
 ];
 
-var module = 0; // 0 is off
+var module = 0; // 0 = off / 1-6 FX modules
 
 function bang() {
   for (var i = 0; i <= 5; i++) {
     outlet(i, ["set", labels[i]]);
   }
-  for (var j = 6; j <= 12; j++) {
+  for (var j = 6; j <= 11; j++) {
     if (!startsWith(fxTypes[j - 6], "Direct")) {
       outlet(j, ["set", fxTypes[j - 6]]);
     } else {
@@ -1185,12 +1185,15 @@ function update() {
   bang();
 }
 
-function setFxModule(newMod) {
-  module = newMod;
+function setFxModule(lastActivatedFx) {
+  post("last activated: ", lastActivatedFx);
+  module = lastActivatedFx;
   update();
 }
 
 function setFxType(fxModule, fxName) {
+  post(fxModule, fxName);
+  // if (fxModule == 0) return;
   fxTypes[fxModule] = fxName;
   update();
 }

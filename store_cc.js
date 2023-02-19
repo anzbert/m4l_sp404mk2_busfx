@@ -22,7 +22,7 @@ function store(effect, knob, value) {
 
 function restore(effect) {
   for (var knob = 0; knob < KNOBS; knob++) {
-    if (effect == 0) {
+    if (effect == 6) {
       out[knob] = 50;
     } else {
       out[knob] = treasure.getcell(effect, knob)[0];
@@ -37,7 +37,7 @@ function restore(effect) {
 }
 
 function resetEffect(effect) {
-  if (effect == 0) return;
+  if (effect == 6) return;
 
   for (var knob = 0; knob < KNOBS; knob++) {
     treasure.setcell2d(effect, knob, 50);
