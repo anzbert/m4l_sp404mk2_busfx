@@ -67,6 +67,59 @@ function fxOneTwo() {
   }
   bang();
 }
+function fxDirectFxOptions() {
+  var fx = [
+    "_parameter_range",
+    "(OFF)",
+    "Filter+Drive",
+    "Resonator",
+    "Sync Delay",
+    "Isolator",
+    "DJFX Looper",
+    "Scatter",
+    "Downer",
+    "Ha-Dou",
+    "Ko-Da-Ma",
+    "Zan-Zou",
+    "To-Gu-Ro",
+    "SBF",
+    "Stopper",
+    "Tape Echo",
+    "TimeCtrlDly",
+    "Super Filter",
+    "WrmSaturator",
+    "303 VinylSim",
+    "404 VinylSim",
+    "Cassette Sim",
+    "Lo-fi",
+    "Reverb",
+    "Chorus",
+    "JUNO Chorus",
+    "Flanger",
+    "Phaser",
+    "Wah",
+    "Slicer",
+    "Tremolo/Pan",
+    "Chromatic PS",
+    "Hyper-Reso",
+    "Ring Mod",
+    "Crusher",
+    "Overdrive",
+    "Distortion",
+    "Equalizer",
+    "Compressor",
+    "SX Reverb",
+    "SX Delay",
+    "Cloud Delay",
+    "Back Spin",
+  ];
+
+  fxList.length = 0;
+  for (var i = 0; i < fx.length; i++) {
+    fxList.push(fx[i]);
+  }
+  bang();
+}
 
 function fxThreeFour() {
   var fx = [
