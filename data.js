@@ -179,7 +179,7 @@ function fxInput() {
     "Auto Pitch",
     "Vocoder",
     "Harmony",
-    "Gt Amp Sim",
+    "GT Amp Sim",
     "Chorus",
     "JUNO Chorus",
     "Reverb",

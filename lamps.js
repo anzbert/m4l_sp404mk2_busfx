@@ -9,10 +9,10 @@ function bang() {
 }
 
 function light(pressed) {
-  // post("pressed", pressed);
   for (var i = 0; i < out.length; i++) {
     if (pressed == i) {
       if (pressed == 6) {
+        // always OFF on 6. otherwise button gets stuck on on
         out[i] = 0;
       } else {
         out[i] = 1;

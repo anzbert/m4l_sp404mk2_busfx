@@ -1005,7 +1005,7 @@ var data = {
       name: "Balance",
     },
   },
-  "SX Chorus": {
+  "SX Delay": {
     0: {
       name: "Time",
     },
@@ -1186,14 +1186,13 @@ function update() {
 }
 
 function setFxModule(lastActivatedFx) {
-  post("last activated: ", lastActivatedFx);
+  // post("last activated: ", lastActivatedFx);
   module = lastActivatedFx;
   update();
 }
 
 function setFxType(fxModule, fxName) {
-  post(fxModule, fxName);
-  // if (fxModule == 0) return;
+  // post(fxModule, fxName);
   fxTypes[fxModule] = fxName;
   update();
 }
