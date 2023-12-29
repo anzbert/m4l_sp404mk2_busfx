@@ -4,3 +4,10 @@
 # Max 4 Live SP404MK2 FX Controller
 
 A Max for Live device that can be used to control the 4 FX + Input FX units on the SP404MK2. Midi mappable and can be automated in Ableton Live.
+
+
+## Installation
+
+1. Download the .amxd file in this repository and drag it onto a track in Ableton.
+2. Set the Midi out of the track to the SP404MK2
+3. Enjoy!!!
