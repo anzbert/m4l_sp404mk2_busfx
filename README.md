@@ -6,7 +6,7 @@ A Max for Live device that can be used to control the 4 FX + Input FX units on t
 
 ## Installation
 
-1. Download the .amxd file in this repository and drag it onto a track in Ableton.
+1. Download the [.amxd](https://github.com/anzbert/m4l_sp404mk2_busfx/raw/master/sp404mk2_2.0_BusFX_v6.amxd) file in this repository and drag it onto a track in Ableton.
 2. Set the Midi out of the track to the SP404MK2
 3. Enjoy!!!
 
